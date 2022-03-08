@@ -1,0 +1,152 @@
+Bucle While (es mas bonito jaja)
+Module Program
+	Sub Main()
+		Console.Title = "Jacquelinne"
+		Dim confirmacion As String
+		confirmacion = "S"
+		'bucle while
+		While (confirmacion = "S" Or confirmacion = "s")
+			Dim num1, num2, r As Integer
+		Console.WriteLine("Ingresa un valor:")
+		num1 = Console.ReadLine()
+
+		Console.WriteLine("Ingresa un segundo valor:")
+		num2 = Console.ReadLine()
+
+		Dim opcion As Integer
+		Console.WriteLine("1---- realizar suma")
+		Console.WriteLine("2---- realizar resta")
+		Console.WriteLine("3---- realizar multiplicacion")
+		Console.WriteLine("4---- realizar division")
+		opcion = Console.ReadLine
+
+			'select case es para q el resultado se muestre uno por uno segun lo selecciones
+			'para evaluar opcion select case
+			Select Case opcion
+				Case 1
+					Console.WriteLine("Resutado de la suma: " & Sumar(num1, num2))
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 2
+					Console.WriteLine("Resultado de la resta: " & Resta(num1, num2))
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 3
+					Multiplicar(num1, num2, r)
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 4
+					Division(num1, num2, r)
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case Else
+					Console.WriteLine("Opcion Invalida :v")
+					Console.WriteLine("Ingrese 'S' para intentarlo nuevamente: ")
+					confirmacion = Console.ReadLine
+
+			End Select
+		End While
+		'si usamos esto nos muestra el resultado de las 4 operaciones ejecutables
+		'USANDO PROCEDIMIENTO'
+		'Multiplicar(num1, num2, r)
+		'Division(num1, num2, r)
+		'Console.ReadKey()
+	End Sub
+	'funcion'
+	Function Sumar(num1, num2) As Integer
+		Return (num1 + num2)
+	End Function
+	Function Resta(num1, num2) As Integer
+		Return (num1 - num2)
+	End Function
+	'procedimiento'
+	Sub Multiplicar(ByRef num1 As Integer, ByRef num2 As Integer, ByRef Res As Integer)
+		Res = num1 * num2
+		Console.WriteLine("Resultado de la multiplicacion: " & Res)
+	End Sub
+
+	Sub Division(ByRef num1 As Integer, ByRef num2 As Integer, ByRef Div As Integer)
+		Div = num1 / num2
+		Console.WriteLine("Resultado de la division: " & Div)
+	End Sub
+
+End Module
+
+Bucle Do Loop (solo permite una variable de condición )
+Module Program
+	Sub Main()
+		Console.Title = "Jacquelinne"
+		Dim confirmacion As String
+		'confirmacion = "S"
+
+		Do
+
+			Dim num1, num2, r As Integer
+			Console.WriteLine("Ingresa un valor:")
+			num1 = Console.ReadLine()
+
+			Console.WriteLine("Ingresa un segundo valor:")
+			num2 = Console.ReadLine()
+
+			Dim opcion As Integer
+			Console.WriteLine("1---- realizar suma")
+			Console.WriteLine("2---- realizar resta")
+			Console.WriteLine("3---- realizar multiplicacion")
+			Console.WriteLine("4---- realizar division")
+			opcion = Console.ReadLine
+
+			'select case es para q el resultado se muestre uno por uno segun lo selecciones
+			'para evaluar opcion select case
+			Select Case opcion
+				Case 1
+					Console.WriteLine("Resutado de la suma: " & Sumar(num1, num2))
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 2
+					Console.WriteLine("Resultado de la resta: " & Resta(num1, num2))
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 3
+					Multiplicar(num1, num2, r)
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case 4
+					Division(num1, num2, r)
+					Console.WriteLine("Ingrese 'S' si desea continuar: ")
+					confirmacion = Console.ReadLine
+				Case Else
+					Console.WriteLine("Opcion Invalida :v")
+					Console.WriteLine("Ingrese 'S' para intentarlo nuevamente: ")
+					confirmacion = Console.ReadLine
+
+			End Select
+
+
+		Loop Until (confirmacion <> "S")
+
+
+		'si usamos esto nos muestra el resultado de las 4 operaciones ejecutables
+		'USANDO PROCEDIMIENTO'
+		'Multiplicar(num1, num2, r)
+		'Division(num1, num2, r)
+		'Console.ReadKey()
+	End Sub
+	'funcion'
+	Function Sumar(num1, num2) As Integer
+		Return (num1 + num2)
+	End Function
+	Function Resta(num1, num2) As Integer
+		Return (num1 - num2)
+	End Function
+	'procedimiento'
+	Sub Multiplicar(ByRef num1 As Integer, ByRef num2 As Integer, ByRef Res As Integer)
+		Res = num1 * num2
+		Console.WriteLine("Resultado de la multiplicacion: " & Res)
+	End Sub
+
+	Sub Division(ByRef num1 As Integer, ByRef num2 As Integer, ByRef Div As Integer)
+		Div = num1 / num2
+		Console.WriteLine("Resultado de la division: " & Div)
+	End Sub
+
+End Module
